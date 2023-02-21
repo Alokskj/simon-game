@@ -7,7 +7,8 @@
     <title>BrainOut</title>
     
     <link rel="stylesheet" href="/style.css" class="css" />
-    <link rel="shortcut icon" href="android-chrome-192x192.png" type="image/x-icon">  
+    <link rel="shortcut icon" href="./images/android-chrome-192x192.png" type="image/x-icon"> 
+    <link rel="manifest" href="manifest.json">
   </head>
   <body>
     <nav>
@@ -49,6 +50,15 @@
     </footer> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="/game.js"></script>
+    <script>
+      if('serviceWorker' in navigator){
+        navigator.serviceWorker.register('./sw.js')
+        .then((res)=>{console.log(res)})
+        .catch((e)=>{console.error(e)})
+      }else{
+        console.error("sw is not working")
+      }
+    </script>
     
   </body>
 </html>

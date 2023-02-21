@@ -122,11 +122,11 @@ else{
 
 // audio
 
-  var blue = new Audio("blue.mp3");
-  var green = new Audio("green.mp3");
-  var red = new Audio("red.mp3");
-  var wrong = new Audio("wrong.mp3");
-  var yellow = new Audio("yellow.mp3");
+  var blue = new Audio("./sounds/blue.mp3");
+  var green = new Audio("./sounds/green.mp3");
+  var red = new Audio("./sounds/red.mp3");
+  var wrong = new Audio("./sounds/wrong.mp3");
+  var yellow = new Audio("./sounds/yellow.mp3");
   function playSound(name){
 
   if( name == "blue"){
